@@ -62,7 +62,7 @@ def fig(df,date,y):
     return fig
     
 def calculateDrift(df,fmonths):
-    train_data=pd.read_excel("D://XParams.xlsx",sheet_name='FinalData')
+    train_data=pd.read_excel("XParams.xlsx",sheet_name='FinalData')
     train_data.columns=['Date','AvgTemp','AvgTempFeelLike','AvgHumidity','AvgWindspeed','AvgRainfall','UnemploymentRate','Demand']
     train_data['Month'] = [i.month for i in train_data['Date']]
     train_data['Year'] = [i.year for i in train_data['Date']]
