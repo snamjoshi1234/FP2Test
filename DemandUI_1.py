@@ -72,7 +72,6 @@ def calculateDrift(df,fmonths):
     newDfTrain=finaltraindata.loc[(finaltraindata['Series']>=127)&(finaltraindata['Series']<=127+fmonths-1)]                      # Get rows with particular value
     newDfTrain.columns=['Series','Month', 'Year','AvgTemp', 'AvgHumidity', 'AvgWindspeed', 'AvgRainfall','UnemploymentRate','ForecastedDemand']
     
-    st.dataframe(newDfTrain)
     data_drift_dashboard = Dashboard(tabs=[DataDriftTab()])
     data_drift_dashboard.calculate(newDfTrain, df)
     data_drift_dashboard.save("driftreport.html")
