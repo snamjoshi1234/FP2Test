@@ -3,7 +3,7 @@
 
 # In[17]:
 
-
+pip install openpyxl
 import streamlit as st
 from pycaret.regression import load_model,predict_model
 import pandas as pd
