@@ -74,7 +74,7 @@ def calculateDrift(df,fmonths):
     
     data_drift_dashboard = Dashboard(tabs=[DataDriftTab()])
     data_drift_dashboard.calculate(newDfTrain, df)
-    data_drift_dashboard.save("driftreport.html")
+    data_drift_dashboard.save("Drift/driftreport.html")
     
     
         
